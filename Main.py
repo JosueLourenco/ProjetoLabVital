@@ -57,7 +57,7 @@ while True: # Menu de opções
             gra.layout(g) # Escolhe o layout entre: Shell, Spring e Random
 
         case 4:
-            print("Programa finalizado!")
+            print("Programa finalizado!!!")
             break
 
         case _:
