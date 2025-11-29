@@ -1,11 +1,12 @@
 import networkx as nx
 # noinspection PyUnresolvedReferences
 import matplotlib.pyplot as plt
-import Graph as gra
+from Graph import Grafo
 
-g = nx.Graph()
+gra = Grafo()
+g = nx.Graph() # Cria o grafo
 opcao = 0
-while True:
+while True: # Menu de opções
     print("Opção 1 - Arestas\n"
           "Opção 2 - Vertices\n"
           "Opção 3 - Desenhar gráfico\n"
@@ -26,9 +27,9 @@ while True:
                 except ValueError:
                     print("Opção inválida, tente novamente.")
                 if oparesta == 1:
-                    gra.aresta(g)
+                    gra.aresta(g)  # Adiciona a aresta
                 elif oparesta == 2:
-                    print("Arestas: ",list(g.edges))
+                    print("Arestas: ",list(g.edges)) # Coloca todas as arestas em uma lista
                 elif oparesta == 3:
                     break
                 else:
@@ -44,16 +45,16 @@ while True:
                 except ValueError:
                     print("Opção inválida, tente novamente.")
                 if opvertice == 1:
-                    gra.vertice(g)
+                    gra.vertice(g)  # Adiciona o vértice
                 elif opvertice == 2:
-                    print("Vértices: ", list(g.nodes))
+                    print("Vértices: ", list(g.nodes)) # Coloca todos os vértices em uma lista
                 elif opvertice == 3:
                     break
                 else:
                     print("Opção inexistente, tente novamente")
 
         case 3:
-            gra.layout(g)
+            gra.layout(g) # Escolhe o layout entre: Shell, Spring e Random
 
         case 4:
             print("Programa finalizado!")
