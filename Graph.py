@@ -2,7 +2,8 @@ import networkx as nx
 # noinspection PyUnresolvedReferences
 import matplotlib.pyplot as plt
 
-def aresta(x):
+class Grafo:
+ def aresta(x):
   while True:
       op1 = input("Digite A e B (espaço para finalizar): ").strip()
       if op1 == "" or op1 == " ":
@@ -16,12 +17,12 @@ def aresta(x):
           x.add_edge(a, b)
           print("aresta adicionada!")
 
-def layout(x):
+ def layout(x):
     print("Digite o Layout desejado: \n"
               "Random - 1\n"
               "Spring - 2\n"
-              "Shell  - 3\n"
-              "Planar - 4\n")
+              "Shell  - 3\n")
+
     op = int(input("- "))
     while True:
         match op:
@@ -37,15 +38,11 @@ def layout(x):
                 nx.draw_shell(x, with_labels=True)
                 plt.show()
                 break
-            case 4:
-                nx.draw_planar(x, with_labels=True)
-                plt.show()
-                break
             case _:
                 print("formato inválido, digite novamente")
                 break
 
-def vertice(x):
+ def vertice(x):
     while True:
         a = input("Digite A (espaço para finalizar): ").strip()
         if a == "" or a == " ":
@@ -56,4 +53,3 @@ def vertice(x):
         else:
             x.add_node(a)
             print("vértice adicionado!")
-
