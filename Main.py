@@ -61,4 +61,4 @@ while True: # Menu de opções
             break
 
         case _:
-            print("Opção inexistente, tente novamente")
+            print("Opção inexistente, tente novamente.")
