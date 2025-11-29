@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 class Grafo:
- def aresta(x):
+ def aresta(self,x):
   while True:
       op1 = input("Digite A e B (espaço para finalizar): ").strip()
       if op1 == "" or op1 == " ":
@@ -17,7 +17,7 @@ class Grafo:
           x.add_edge(a, b)
           print("aresta adicionada!")
 
- def layout(x):
+ def layout(self,x):
     print("Digite o Layout desejado: \n"
               "Random - 1\n"
               "Spring - 2\n"
@@ -42,7 +42,7 @@ class Grafo:
                 print("formato inválido, digite novamente")
                 break
 
- def vertice(x):
+ def vertice(self,x):
     while True:
         a = input("Digite A (espaço para finalizar): ").strip()
         if a == "" or a == " ":
